@@ -10,6 +10,11 @@ public class Sale
 	    amount = a;
 	    }
     
+	public String getDay()
+		{
+		return day;
+		}
+	
 	public String toString()
 	    {
 	     return "Day of Sale: " + day + "\n   Amount:  $"  + amount;

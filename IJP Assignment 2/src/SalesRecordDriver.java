@@ -1,6 +1,7 @@
 
 public class SalesRecordDriver
 {
+static int numberOfSundays = 0;
 
 public static void main(String[] args)
 	{	
@@ -20,8 +21,16 @@ public static void main(String[] args)
     sr.addSale(new Sale("Friday", 229.26));
     sr.addSale(new Sale("Friday", 654.37));
 
-    System.out.println(SalesRecord.record.get(2));
     System.out.println(sr.toString());
+    
+    for (int i = 0; i < SalesRecord.record.size(); i++)
+	    	{
+	    if (SalesRecord.record.get(i).getDay().equals("Monday"))
+	    			{
+	    			numberOfSundays++;
+	    			}
+	    	}
+    System.out.println("There were " + numberOfSundays + " Monday sales.");
      }
 }
 
