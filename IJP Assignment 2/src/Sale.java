@@ -15,6 +15,11 @@ public class Sale
 		return day;
 		}
 	
+	public double getAmount()
+		{
+		return amount;
+		}
+	
 	public String toString()
 	    {
 	     return "Day of Sale: " + day + "\n   Amount:  $"  + amount;

@@ -1,7 +1,8 @@
 
 public class SalesRecordDriver
 {
-static int numberOfSundays = 0;
+static int numberOfMondays = 0;
+static double totalSales = 0.0;
 
 public static void main(String[] args)
 	{	
@@ -27,10 +28,13 @@ public static void main(String[] args)
 	    	{
 	    if (SalesRecord.record.get(i).getDay().equals("Monday"))
 	    			{
-	    			numberOfSundays++;
+	    			numberOfMondays++;
+	    			totalSales = totalSales + SalesRecord.record.get(i).getAmount();
 	    			}
 	    	}
-    System.out.println("There were " + numberOfSundays + " Monday sales.");
+    System.out.println("There were " + numberOfMondays + " Monday sales.");
+    System.out.println("There was a total sales amount of $" + totalSales + " on those days.");
+
      }
 }
 
